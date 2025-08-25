@@ -38,7 +38,7 @@ class TargetWeightActivity : AppCompatActivity() {
 
         val skipButton: Button = findViewById(R.id.btnContinue)
         skipButton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivityHome::class.java)
             startActivity(intent)
             finish() // prevents going back to Onboard screen
         }
