@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Fitness Glory</string>
+    <string name="continue_google">Continue with Google</string>
+    <string name="continue_apple">Continue with Apple</string>
+    <string name="continue_facebook">Continue with Facebook</string>
+    <string name="continue_twitter">Continue with Twitter</string>
+    <string name="sign_up">Sign up</string>
+    <string name="log_in">Log in</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="back">Back</string>
+    <string name="welcome_back">Welcome Back! 👋</string>
+    <string name="login_subtitle">Sign in to continue your fitness journey.</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="or">or</string>
+    <string name="male">Man</string>
+    <string name="female">Woman</string>
+    <string name="skip">Skip</string>
+    <string name="continue_txt">Continue</string>
+
+    <!-- Home -->
+    <string name="main_exercises">Main Exercises</string>
+    <string name="recommended_for_you">Recommended for You</string>
+
+    <!-- Pickers / units -->
+    <string name="years">years</string>
+    <string name="cm">cm</string>
+    <string name="ft">ft</string>
+    <string name="kg">kg</string>
+
+    <!-- (Optional) section titles if you move hardcoded texts to strings -->
+    <string name="age_title_prefix">How</string>
+    <string name="age_title_emphasis">Old</string>
+    <string name="age_title_suffix">Are You?</string>
+    <string name="age_subtitle">Share your age with us.</string>
+
+    <string name="height_title_prefix">What\'s Your</string>
+    <string name="height_title_emphasis">Height</string>
+    <string name="height_subtitle">How tall are you?</string>
+
+    <string name="weight_title_prefix">Your Current</string>
+    <string name="weight_title_emphasis">Weight</string>
+    <string name="weight_subtitle">Share your current weight.</string>
+
+    <string name="target_weight_title_prefix">Your</string>
+    <string name="target_weight_title_emphasis">Target Weight</string>
+    <string name="target_weight_subtitle">Where would you like to be?</string><string name="notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="hero_title">Serenity Flow: Yoga for Beginner</string>
+    <string name="get_started">Get Started</string>
+    <string name="section_main_exercises">Main Exercises</string>
+    <string name="section_recommended">Recommended For You</string>
+    <string name="view_all">View All</string>
+
+    <!-- bottom nav -->
+    <string name="nav_home">Home</string>
+    <string name="nav_discover">Discover</string>
+    <string name="nav_reports">Reports</string>
+    <string name="nav_history">History</string>
+    <string name="nav_account">Account</string>
+
+
+
+
+
+</resources>

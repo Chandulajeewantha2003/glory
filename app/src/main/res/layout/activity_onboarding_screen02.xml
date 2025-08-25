@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor">
+
+    <!-- App Name -->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="Fitness Glory"
+        android:textColor="@color/accentColor"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Illustration -->
+    <ImageView
+        android:id="@+id/illustration"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/onboard1"
+        android:contentDescription="Workout Illustration"
+        app:layout_constraintTop_toBottomOf="@id/appName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <!-- Title (you can change text for screen 2 if you like) -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Track Your Grind"
+        android:textColor="@color/accentColor"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/illustration" />
+
+    <!-- Description -->
+
+    <!-- Slide Indicators (middle active) -->
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Log every set, weight, and step. Data keeps you honest, highlights your wins, and shows exactly how to adjust the plan when progress slows."
+        android:textColor="@color/accentColor"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <LinearLayout
+        android:id="@+id/slideIndicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description"
+        app:layout_constraintBottom_toTopOf="@id/skipButton"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp">
+
+        <!-- first inactive -->
+        <View
+            android:layout_width="30dp"
+            android:layout_height="4dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/indicator_inactive"/>
+
+        <!-- middle active -->
+        <View
+            android:layout_width="30dp"
+            android:layout_height="4dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/indicator_active"/>
+
+        <!-- third inactive -->
+        <View
+            android:layout_width="30dp"
+            android:layout_height="4dp"
+            android:background="@drawable/indicator_inactive"/>
+    </LinearLayout>
+
+    <!-- Skip Button -->
+    <Button
+        android:id="@+id/skipButton"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="SKIP"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@color/primaryColor"
+        android:backgroundTint="@color/secondaryColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

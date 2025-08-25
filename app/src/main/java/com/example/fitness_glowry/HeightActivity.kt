@@ -1,0 +1,88 @@
+package com.example.fitness_glowry
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Button
+import android.widget.NumberPicker
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.button.MaterialButton
+
+class HeightActivity : AppCompatActivity() {
+
+    private var selectedHeight = 170 // cm
+    private lateinit var tvPrev: TextView
+    private lateinit var tvSelected: TextView
+    private lateinit var tvNext: TextView
+    private lateinit var np: NumberPicker
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_height)
+
+        selectedHeight = savedInstanceState?.getInt("height_cm") ?: selectedHeight
+
+        tvPrev = findViewById(R.id.tvPrev)
+        tvSelected = findViewById(R.id.tvSelected)
+        tvNext = findViewById(R.id.tvNext)
+        np = findViewById(R.id.npHeight)
+
+        setupPicker()
+
+        // Buttons (wire as you like)
+        findViewById<MaterialButton>(R.id.btnSkip).setOnClickListener { finish() }
+        findViewById<MaterialButton>(R.id.btnContinue).setOnClickListener {
+            // TODO: navigate; use selectedHeight (in cm)
+            // startActivity(Intent(this, NextActivity::class.java).putExtra("height_cm", selectedHeight))
+            finish()
+        }
+
+        val skipButton: Button = findViewById(R.id.btnContinue)
+        skipButton.setOnClickListener {
+            val intent = Intent(this, WeightActivity::class.java)
+            startActivity(intent)
+            finish() // prevents going back to Onboard screen
+        }
+    }
+
+    private fun setupPicker() {
+        // list 120..220 cm
+        val values = (120..220).map { it.toString() }.toTypedArray()
+
+        np.displayedValues = null
+        np.minValue = 0
+        np.maxValue = values.lastIndex
+        np.displayedValues = values
+        np.wrapSelectorWheel = false
+
+        val startIdx = (selectedHeight - 120).coerceIn(0, values.lastIndex)
+        np.value = startIdx
+        updateOverlay(startIdx)
+
+        np.setOnValueChangedListener { _, _, newIndex ->
+            selectedHeight = 120 + newIndex
+            updateOverlay(newIndex)
+            tvSelected.animate().scaleX(1.08f).scaleY(1.08f).setDuration(90).withEndAction {
+                tvSelected.scaleX = 1f; tvSelected.scaleY = 1f
+            }.start()
+        }
+
+        // behave like a wheel without keyboard
+        np.isFocusable = false
+        np.isClickable = true
+        np.isEnabled = true
+        np.descendantFocusability = NumberPicker.FOCUS_BLOCK_DESCENDANTS
+    }
+
+    private fun updateOverlay(index: Int) {
+        val h = 120 + index
+        tvSelected.text = h.toString()
+        tvPrev.text = if (h > 120) (h - 1).toString() else ""
+        tvNext.text = if (h < 220) (h + 1).toString() else ""
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt("height_cm", selectedHeight)
+        super.onSaveInstanceState(outState)
+    }
+}

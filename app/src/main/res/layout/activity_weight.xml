@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    android:padding="16dp">
+
+    <!-- Top row: Progress • page (no back button) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topRow"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4/5"
+            android:textStyle="bold"
+            android:textColor="@color/accentColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:progress="80"
+            app:indicatorColor="@color/secondaryColor"
+            app:trackColor="@color/surfaceDark"
+            app:trackThickness="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvPage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Title: Your Current Weight -->
+    <TextView
+        android:id="@+id/tvTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/accentColor"
+        app:layout_constraintTop_toBottomOf="@id/topRow"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvTitleEm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Current"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/secondaryColor"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTitle1"
+        app:layout_constraintStart_toEndOf="@id/tvTitle1"/>
+
+    <TextView
+        android:id="@+id/tvTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Weight"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/accentColor"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTitle1"
+        app:layout_constraintStart_toEndOf="@id/tvTitleEm"/>
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Share your current weight."
+        android:textColor="@color/white70"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Long yellow guide lines -->
+    <View
+        android:id="@+id/lineTop"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/secondaryColor"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="36dp"/>
+
+    <View
+        android:id="@+id/lineBottom"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/secondaryColor"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="24dp"
+        android:layout_marginHorizontal="36dp"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/centerOverlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        app:layout_constraintTop_toTopOf="@id/npWeight"
+        app:layout_constraintBottom_toBottomOf="@id/npWeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:id="@+id/tickTop"
+            android:layout_width="120dp"
+            android:layout_height="2dp"
+            android:background="@color/secondaryColor"
+            app:layout_constraintBottom_toTopOf="@id/tvSelected"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="75"
+            android:textSize="22sp"
+            android:textColor="@color/white70"
+            app:layout_constraintBottom_toTopOf="@id/tvSelected"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tvSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="76"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="@color/accentColor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="77"
+            android:textSize="22sp"
+            android:textColor="@color/white70"
+            app:layout_constraintTop_toBottomOf="@id/tvSelected"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <View
+            android:id="@+id/tickBottom"
+            android:layout_width="120dp"
+            android:layout_height="2dp"
+            android:background="@color/secondaryColor"
+            app:layout_constraintTop_toBottomOf="@id/tvSelected"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Hidden NumberPicker that handles the scroll -->
+    <NumberPicker
+        android:id="@+id/npWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:alpha="0"
+        app:layout_constraintTop_toBottomOf="@id/lineTop"
+        app:layout_constraintBottom_toTopOf="@id/lineBottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Unit label at the center -->
+    <TextView
+        android:id="@+id/tvUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kg"
+        android:textColor="@color/accentColor"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="@id/npWeight"
+        app:layout_constraintBottom_toBottomOf="@id/npWeight"
+        app:layout_constraintStart_toEndOf="@id/npWeight"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Bottom buttons -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSkip"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="@string/skip"
+            android:textColor="@color/accentColor"
+            android:backgroundTint="@color/surfaceDark"
+            app:cornerRadius="28dp"
+            android:layout_marginEnd="12dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinue"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="@string/continue_txt"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"
+            android:backgroundTint="@color/secondaryColor"
+            app:cornerRadius="28dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

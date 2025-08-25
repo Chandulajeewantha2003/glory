@@ -1,0 +1,4 @@
+<resources>
+    <!-- thickness of the yellow outline when a card is selected -->
+    <dimen name="sel_stroke">4dp</dimen>
+</resources>

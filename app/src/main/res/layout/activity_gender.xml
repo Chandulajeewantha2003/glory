@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    android:padding="16dp">
+
+    <!-- Top bar -->
+
+    <!-- Progress bar aligned with arrow and page -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress"
+        android:layout_width="285dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="24dp"
+        android:progress="7"
+        app:indicatorColor="@color/secondaryColor"
+        app:trackColor="@color/surfaceDark"
+        app:trackThickness="8dp"
+        app:layout_constraintEnd_toStartOf="@id/tvPage"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.538" />
+
+    <TextView
+        android:id="@+id/tvPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/5"
+        android:textColor="@color/accentColor"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@id/imageView2"/>
+
+    <TextView
+        android:id="@+id/tvTitlePrefix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Your"
+        android:textColor="@color/accentColor"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/tvTitleEmphasis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Gender"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/secondaryColor"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTitlePrefix"
+        app:layout_constraintStart_toEndOf="@id/tvTitlePrefix"/>
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Let's start by understanding you."
+        android:textSize="14sp"
+        android:textColor="@color/white70"
+        app:layout_constraintTop_toBottomOf="@id/tvTitlePrefix"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Gender cards row -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardMale"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/surfaceDark"
+        app:strokeWidth="0dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintWidth_percent="0.46"
+        app:layout_constraintDimensionRatio="3:5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintEnd_toStartOf="@id/cardFemale"
+        app:layout_constraintBottom_toTopOf="@id/bottomButtons"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/ivMale"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/male_full"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/male" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFemale"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/surfaceDark"
+        app:strokeWidth="0dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintWidth_percent="0.46"
+        app:layout_constraintDimensionRatio="3:5"
+        app:layout_constraintStart_toEndOf="@id/cardMale"
+        app:layout_constraintTop_toTopOf="@id/cardMale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/cardMale"
+        android:layout_marginStart="12dp">
+
+        <ImageView
+            android:id="@+id/ivFemale"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/female_full"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/female" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Labels under cards -->
+    <TextView
+        android:id="@+id/tvMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/male"
+        android:textStyle="bold"
+        android:textColor="@color/accentColor"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/cardMale"
+        app:layout_constraintStart_toStartOf="@id/cardMale"
+        app:layout_constraintEnd_toEndOf="@id/cardMale"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/female"
+        android:textStyle="bold"
+        android:textColor="@color/accentColor"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/cardFemale"
+        app:layout_constraintStart_toStartOf="@id/cardFemale"
+        app:layout_constraintEnd_toEndOf="@id/cardFemale"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Bottom buttons -->
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSkip"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="@string/skip"
+            android:textColor="@color/accentColor"
+            android:backgroundTint="@color/surfaceDark"
+            app:cornerRadius="28dp"
+            android:layout_marginEnd="12dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinue"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="@string/continue_txt"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"
+            android:backgroundTint="@color/secondaryColor"
+            app:cornerRadius="28dp"
+            android:enabled="false"/>
+    </LinearLayout>
+
+    <!-- Back arrow icon -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="39dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow"
+        app:tint="@android:color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>
