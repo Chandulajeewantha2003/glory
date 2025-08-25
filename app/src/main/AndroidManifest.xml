@@ -21,7 +21,7 @@
             android:name=".MainActivityReport"
             android:exported="false" /> <!-- Launcher Activity (must be exported = true) -->
         <activity
-            android:name=".MainActivityHome"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +33,7 @@
             android:name=".MainActivityDiscover"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityHome"
             android:exported="false" />
         <activity
             android:name=".TargetWeightActivity"
