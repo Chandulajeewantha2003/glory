@@ -65,5 +65,12 @@
     <string name="nav_history">History</string>
     <string name="nav_account">Account</string>
 
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+
 
 </resources>
