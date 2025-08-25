@@ -23,7 +23,7 @@ class MainActivityReport : AppCompatActivity() {
 
         // Bottom navigation logic
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNavigationView.selectedItemId = R.id.nav_report // Mark "report" as selected
+        bottomNavigationView.selectedItemId = R.id.nav_reports // Mark "report" as selected
 
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
@@ -43,7 +43,7 @@ class MainActivityReport : AppCompatActivity() {
                     true
                 }
 
-                R.id.nav_report -> {
+                R.id.nav_reports -> {
                     //Done
 
                     true
@@ -57,7 +57,7 @@ class MainActivityReport : AppCompatActivity() {
                     true
                 }
 
-                R.id.nav_profile -> {
+                R.id.nav_account -> {
                     val intent = Intent(this, MainActivityProfile::class.java)
                     startActivity(intent)
                     overridePendingTransition(0, 0)

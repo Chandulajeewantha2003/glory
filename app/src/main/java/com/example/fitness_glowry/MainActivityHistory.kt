@@ -43,7 +43,7 @@ class MainActivityHistory : AppCompatActivity() {
                     true
                 }
 
-                R.id.nav_report -> {
+                R.id.nav_reports -> {
                      val intent = Intent(this, MainActivityReport::class.java)
                     startActivity(intent)
                     overridePendingTransition(0, 0)
@@ -57,7 +57,7 @@ class MainActivityHistory : AppCompatActivity() {
                     true
                 }
 
-                R.id.nav_profile -> {
+                R.id.nav_account -> {
                      val intent = Intent(this, MainActivityProfile::class.java)
                     startActivity(intent)
                     overridePendingTransition(0, 0)
