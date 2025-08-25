@@ -2,52 +2,68 @@ package com.example.fitness_glowry
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.button.MaterialButton
 
 class MainActivityHome : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_main_home)
 
-        // Hero CTA
-        findViewById<MaterialButton>(R.id.btnGetStarted).setOnClickListener {
-            Toast.makeText(this, "Get Started tapped", Toast.LENGTH_SHORT).show()
+        // Handle edge-to-edge insets
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
         }
 
-        // Bottom nav
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
-        bottomNav.selectedItemId = R.id.nav_home
+        // Bottom navigation logic
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.selectedItemId = R.id.nav_home // Mark "Home" as selected
 
-        bottomNav.setOnItemSelectedListener { item ->
+        bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    // Already on Home
+                    // Already on MainHome, do nothing
                     true
                 }
+
                 R.id.nav_discover -> {
-                    startActivity(Intent(this, MainActivityDiscover::class.java))
-                    overridePendingTransition(0,0) // smooth, no animation
+                    val intent = Intent(this, MainActivityDiscover::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(0, 0)
+                    finish()
                     true
                 }
-                R.id.nav_reports -> {
-              //      startActivity(Intent(this, MainActivityReport::class.java))
-                    overridePendingTransition(0,0)
+
+                R.id.nav_report -> {
+                   // val intent = Intent(this, MainActivityReport::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(0, 0)
+                    finish()
                     true
                 }
+
                 R.id.nav_history -> {
-             //       startActivity(Intent(this, MainActivityHistory::class.java))
-                    overridePendingTransition(0,0)
+                  //  val intent = Intent(this, MainActivityHistory::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(0, 0)
+                    finish()
                     true
                 }
-                R.id.nav_account -> {
-              //      startActivity(Intent(this, MainActivityAccount::class.java))
-                    overridePendingTransition(0,0)
+
+                R.id.nav_profile -> {
+                   // val intent = Intent(this, MainActivityProfile::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(0, 0)
+                    finish()
                     true
                 }
+
                 else -> false
             }
         }
