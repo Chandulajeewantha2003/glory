@@ -134,7 +134,7 @@
             <!-- Banner Card 2 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
+                android:layout_height="450dp"
                 android:layout_marginBottom="16dp"
                 app:cardCornerRadius="16dp"
                 app:cardBackgroundColor="@color/surfaceDark"
