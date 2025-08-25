@@ -14,56 +14,43 @@ class MainActivityDiscover : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main_discover)
 
-        // Handle edge-to-edge insets
+        // Ensure root view has id="main" in XML
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Bottom navigation logic
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNavigationView.selectedItemId = R.id.nav_discover // Mark "Home" as selected
+        bottomNavigationView.selectedItemId = R.id.nav_discover
 
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    val intent = Intent(this, MainActivityHome::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this, MainActivityHome::class.java))
                     overridePendingTransition(0, 0)
                     finish()
                     true
                 }
-
-                R.id.nav_discover -> {
-                    //repeat
-                    true
-                }
-
+                R.id.nav_discover -> true
                 R.id.nav_reports -> {
-                    val intent = Intent(this, MainActivityReport::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this, MainActivityReport::class.java))
                     overridePendingTransition(0, 0)
                     finish()
                     true
                 }
-
                 R.id.nav_history -> {
-                     val intent = Intent(this, MainActivityHistory::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this, MainActivityHistory::class.java))
                     overridePendingTransition(0, 0)
                     finish()
                     true
                 }
-
                 R.id.nav_account -> {
-                     val intent = Intent(this, MainActivityProfile::class.java)
-                    startActivity(intent)
+                    startActivity(Intent(this, MainActivityProfile::class.java))
                     overridePendingTransition(0, 0)
                     finish()
                     true
                 }
-
                 else -> false
             }
         }
