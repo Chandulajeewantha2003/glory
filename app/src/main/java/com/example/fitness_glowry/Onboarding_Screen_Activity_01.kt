@@ -25,8 +25,8 @@ class Onboarding_Screen_Activity_01 : AppCompatActivity() {
         val skipButton: Button = findViewById(R.id.skipButton)
         skipButton.setOnClickListener {
             val intent = Intent(this, Onboarding_Screen_Activity_02::class.java)
-            startAct ivity(intent)
-            finish( ) // prevents going back to Onboard screen
+            startActivity(intent)
+            finish() // prevents going back to Onboard screen
         }
     }
 }
