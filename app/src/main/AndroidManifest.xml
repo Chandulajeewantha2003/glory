@@ -11,30 +11,60 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Fitness_Glowry">
-
-        <!-- Launcher Activity (must be exported = true) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityProfile"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityHistory"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityReport"
+            android:exported="false" /> <!-- Launcher Activity (must be exported = true) -->
+        <activity
+            android:name=".MainActivityHome"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivityDiscover" android:exported="false" />
-        <activity android:name=".MainActivityHome" android:exported="false" />
-        <activity android:name=".TargetWeightActivity" android:exported="false" />
-        <activity android:name=".WeightActivity" android:exported="false" />
-        <activity android:name=".HeightActivity" android:exported="false" />
-        <activity android:name=".AgeActivity" android:exported="false" />
-        <activity android:name=".GenderActivity" android:exported="false" />
-        <activity android:name=".Activity_Signup" android:exported="false" />
-        <activity android:name=".activity_login" android:exported="false" />
-        <activity android:name=".Onboarding_Screen_Activity_03" android:exported="false" />
-        <activity android:name=".Onboarding_Screen_Activity_02" android:exported="false" />
-        <activity android:name=".Onboarding_Screen_Activity_01" android:exported="false" />
-
+        <activity
+            android:name=".MainActivityDiscover"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TargetWeightActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WeightActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HeightActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AgeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GenderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Signup"
+            android:exported="false" />
+        <activity
+            android:name=".activity_login"
+            android:exported="false" />
+        <activity
+            android:name=".Onboarding_Screen_Activity_03"
+            android:exported="false" />
+        <activity
+            android:name=".Onboarding_Screen_Activity_02"
+            android:exported="false" />
+        <activity
+            android:name=".Onboarding_Screen_Activity_01"
+            android:exported="false" />
     </application>
 
 </manifest>

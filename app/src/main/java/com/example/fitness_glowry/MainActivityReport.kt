@@ -8,11 +8,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivityHome : AppCompatActivity() {
+class MainActivityReport : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main_home)
+        setContentView(R.layout.activity_main_report)
 
         // Handle edge-to-edge insets
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -23,12 +23,15 @@ class MainActivityHome : AppCompatActivity() {
 
         // Bottom navigation logic
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNavigationView.selectedItemId = R.id.nav_home // Mark "Home" as selected
+        bottomNavigationView.selectedItemId = R.id.nav_report // Mark "report" as selected
 
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    // Already on MainHome, do nothing
+                    val intent = Intent(this, MainActivityHome::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(0, 0)
+                    finish()
                     true
                 }
 
@@ -41,15 +44,13 @@ class MainActivityHome : AppCompatActivity() {
                 }
 
                 R.id.nav_report -> {
-                    val intent = Intent(this, MainActivityReport::class.java)
-                    startActivity(intent)
-                    overridePendingTransition(0, 0)
-                    finish()
+                    //Done
+
                     true
                 }
 
                 R.id.nav_history -> {
-                   val intent = Intent(this, MainActivityHistory::class.java)
+                     val intent = Intent(this, MainActivityHistory::class.java)
                     startActivity(intent)
                     overridePendingTransition(0, 0)
                     finish()

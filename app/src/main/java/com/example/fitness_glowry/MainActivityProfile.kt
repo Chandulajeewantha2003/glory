@@ -8,11 +8,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivityHome : AppCompatActivity() {
+class MainActivityProfile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main_home)
+        setContentView(R.layout.activity_main_profile)
 
         // Handle edge-to-edge insets
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -23,12 +23,15 @@ class MainActivityHome : AppCompatActivity() {
 
         // Bottom navigation logic
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNavigationView.selectedItemId = R.id.nav_home // Mark "Home" as selected
+        bottomNavigationView.selectedItemId = R.id.nav_profile // Mark "profile" as selected
 
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    // Already on MainHome, do nothing
+                    val intent = Intent(this, MainActivityHome::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(0, 0)
+                    finish()
                     true
                 }
 
@@ -45,11 +48,12 @@ class MainActivityHome : AppCompatActivity() {
                     startActivity(intent)
                     overridePendingTransition(0, 0)
                     finish()
+
                     true
                 }
 
                 R.id.nav_history -> {
-                   val intent = Intent(this, MainActivityHistory::class.java)
+                    val intent = Intent(this, MainActivityHistory::class.java)
                     startActivity(intent)
                     overridePendingTransition(0, 0)
                     finish()
@@ -57,10 +61,7 @@ class MainActivityHome : AppCompatActivity() {
                 }
 
                 R.id.nav_profile -> {
-                    val intent = Intent(this, MainActivityProfile::class.java)
-                    startActivity(intent)
-                    overridePendingTransition(0, 0)
-                    finish()
+
                     true
                 }
 
