@@ -21,7 +21,7 @@
             android:name=".MainActivityReport"
             android:exported="false" /> <!-- Launcher Activity (must be exported = true) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityDiscover"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivityDiscover"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivityHome"
