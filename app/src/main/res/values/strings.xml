@@ -49,7 +49,8 @@
 
     <string name="target_weight_title_prefix">Your</string>
     <string name="target_weight_title_emphasis">Target Weight</string>
-    <string name="target_weight_subtitle">Where would you like to be?</string><string name="notifications">Notifications</string>
+    <string name="target_weight_subtitle">Where would you like to be?</string>
+    <string name="notifications">Notifications</string>
     <string name="profile">Profile</string>
     <string name="hero_title">Serenity Flow: Yoga for Beginner</string>
     <string name="get_started">Get Started</string>
@@ -63,9 +64,6 @@
     <string name="nav_reports">Reports</string>
     <string name="nav_history">History</string>
     <string name="nav_account">Account</string>
-
-
-
 
 
 </resources>

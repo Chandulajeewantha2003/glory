@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fitness_Glowry">
         <activity
-            android:name=".MainActivityHome"
+            android:name=".MainActivityDiscover"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".TargetWeightActivity"
@@ -48,7 +48,7 @@
             android:name=".Onboarding_Screen_Activity_01"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityHome"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

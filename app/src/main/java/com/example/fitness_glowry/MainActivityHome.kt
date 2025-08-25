@@ -1,5 +1,6 @@
 package com.example.fitness_glowry
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,26 +21,31 @@ class MainActivityHome : AppCompatActivity() {
         // Bottom nav
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
         bottomNav.selectedItemId = R.id.nav_home
+
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    // already on Home
+                    // Already on Home
                     true
                 }
                 R.id.nav_discover -> {
-                    Toast.makeText(this, "Discover", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, MainActivityDiscover::class.java))
+                    overridePendingTransition(0,0) // smooth, no animation
                     true
                 }
                 R.id.nav_reports -> {
-                    Toast.makeText(this, "Reports", Toast.LENGTH_SHORT).show()
+              //      startActivity(Intent(this, MainActivityReport::class.java))
+                    overridePendingTransition(0,0)
                     true
                 }
                 R.id.nav_history -> {
-                    Toast.makeText(this, "History", Toast.LENGTH_SHORT).show()
+             //       startActivity(Intent(this, MainActivityHistory::class.java))
+                    overridePendingTransition(0,0)
                     true
                 }
                 R.id.nav_account -> {
-                    Toast.makeText(this, "Account", Toast.LENGTH_SHORT).show()
+              //      startActivity(Intent(this, MainActivityAccount::class.java))
+                    overridePendingTransition(0,0)
                     true
                 }
                 else -> false
