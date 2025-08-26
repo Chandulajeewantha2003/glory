@@ -59,7 +59,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:backgroundTint="@color/secondaryColor"
-                    android:text="Daily" />
+                    android:text="Daily"
+                    android:textColor="@color/surfaceDark" />
 
                 <Button
                     android:id="@+id/btnWeekly"
@@ -67,7 +68,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:backgroundTint="@color/secondaryColor"
-                    android:text="Weekly" />
+                    android:text="Weekly"
+                    android:textColor="@color/surfaceDark" />
 
                 <Button
                     android:id="@+id/Monthly"
@@ -75,7 +77,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:backgroundTint="@color/secondaryColor"
-                    android:text="Monthly" />
+                    android:text="Monthly"
+                    android:textColor="@color/surfaceDark" />
 
             </LinearLayout>
 
