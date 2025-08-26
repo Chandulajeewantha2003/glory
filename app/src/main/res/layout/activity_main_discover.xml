@@ -183,7 +183,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:backgroundTint="@color/secondaryColor"
-                    android:text="ALL" />
+                    android:text="ALL"
+                    android:textColor="@color/surfaceDark" />
 
                 <Button
                     android:id="@+id/btnBeginner"
@@ -191,7 +192,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:backgroundTint="@color/secondaryColor"
-                    android:text="Beginner" />
+                    android:text="Beginner"
+                    android:textColor="@color/surfaceDark" />
 
                 <Button
                     android:id="@+id/intermediate"
@@ -199,7 +201,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:backgroundTint="@color/secondaryColor"
-                    android:text="Intermediate" />
+                    android:text="Intermediate"
+                    android:textColor="@color/surfaceDark" />
 
 
 
