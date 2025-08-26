@@ -21,6 +21,7 @@ class MainActivityHome : AppCompatActivity() {
             insets
         }
 
+
         // Bottom navigation logic
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigationView.selectedItemId = R.id.nav_home // Mark "Home" as selected
