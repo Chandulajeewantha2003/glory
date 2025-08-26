@@ -9,7 +9,7 @@
     android:background="@color/primaryColor"
     tools:context=".MainActivityDiscover">
 
-    <!-- Scrollable Content -->
+
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -26,7 +26,7 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Search bar -->
+
             <EditText
                 android:id="@+id/editTextSearch"
                 android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                 android:textColor="@color/accentColor"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="8dp"/>
-            <!-- Example Recommendation Card 1 -->
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,7 +97,6 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Example Recommendation Card 2 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -141,7 +140,6 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Banner Card 1 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
@@ -158,7 +156,6 @@
                     android:alpha="0.9"/>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Title -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -210,8 +207,6 @@
             </LinearLayout>
 
 
-
-            <!-- GridLayout with 4 images -->
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -220,7 +215,6 @@
                 android:useDefaultMargins="true"
                 android:alignmentMode="alignMargins">
 
-                <!-- Image 1 -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -244,7 +238,6 @@
                         android:paddingTop="4dp"/>
                 </LinearLayout>
 
-                <!-- Image 2 -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -268,7 +261,6 @@
                         android:paddingTop="4dp"/>
                 </LinearLayout>
 
-                <!-- Image 3 -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -292,7 +284,6 @@
                         android:paddingTop="4dp"/>
                 </LinearLayout>
 
-                <!-- Image 4 -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -318,17 +309,15 @@
 
             </GridLayout>
 
-            <!-- Title -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Body Focus Area"
+                android:text="Workout Plans"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- Example Recommendation Card 2 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -358,7 +347,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Morning Meditation"
+                            android:text="Lean and Strong"
                             android:textStyle="bold"
                             android:textSize="16sp"
                             android:textColor="@color/accentColor"/>
@@ -372,7 +361,6 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Example Recommendation Card 2 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -402,7 +390,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Morning Meditation"
+                            android:text="Build and Burn"
                             android:textStyle="bold"
                             android:textSize="16sp"
                             android:textColor="@color/accentColor"/>

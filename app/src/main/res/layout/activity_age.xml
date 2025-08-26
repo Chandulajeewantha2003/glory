@@ -8,7 +8,7 @@
     android:background="@color/primaryColor"
     android:padding="16dp">
 
-    <!-- Top row: Progress • 2/5 (no back button) -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topRow"
         android:layout_width="0dp"
@@ -44,7 +44,7 @@
             android:layout_marginEnd="12dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Title -->
+
     <TextView
         android:id="@+id/tvTitle1"
         android:layout_width="wrap_content"
@@ -91,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"/>
 
-    <!-- Long highlight lines you already had -->
+
     <View
         android:id="@+id/lineTop"
         android:layout_width="0dp"
@@ -114,7 +114,6 @@
         android:layout_marginBottom="24dp"
         android:layout_marginHorizontal="36dp"/>
 
-    <!-- ✅ Center overlay: shows prev / selected / next and short yellow ticks -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/centerOverlay"
         android:layout_width="wrap_content"
@@ -126,7 +125,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- top short tick -->
         <View
             android:id="@+id/tickTop"
             android:layout_width="120dp"
@@ -137,7 +135,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginBottom="6dp"/>
 
-        <!-- prev (dim) -->
         <TextView
             android:id="@+id/tvPrev"
             android:layout_width="wrap_content"
@@ -150,7 +147,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginBottom="12dp"/>
 
-        <!-- selected (big, white) -->
         <TextView
             android:id="@+id/tvSelected"
             android:layout_width="wrap_content"
@@ -164,7 +160,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <!-- next (dim) -->
         <TextView
             android:id="@+id/tvNext"
             android:layout_width="wrap_content"
@@ -177,7 +172,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="12dp"/>
 
-        <!-- bottom short tick -->
+
         <View
             android:id="@+id/tickBottom"
             android:layout_width="120dp"
@@ -189,7 +184,7 @@
             android:layout_marginTop="6dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- NumberPicker behind overlay (transparent but handles scroll) -->
+
     <NumberPicker
         android:id="@+id/npAge"
         android:layout_width="wrap_content"
@@ -200,7 +195,7 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- 'years' label (white) aligned with center -->
+
     <TextView
         android:id="@+id/tvYears"
         android:layout_width="wrap_content"
@@ -213,7 +208,7 @@
         app:layout_constraintStart_toEndOf="@id/npAge"
         android:layout_marginStart="8dp"/>
 
-    <!-- Bottom buttons -->
+
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="0dp"

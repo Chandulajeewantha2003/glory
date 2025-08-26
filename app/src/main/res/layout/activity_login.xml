@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@color/primaryColor">
 
-    <!-- Logo -->
+
     <ImageView
         android:id="@+id/logoMark"
         android:layout_width="245dp"
@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Title -->
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logoMark" />
 
-    <!-- Subtitle -->
+
     <TextView
         android:id="@+id/subtitle"
         android:layout_width="wrap_content"

@@ -8,7 +8,7 @@
     android:background="@color/primaryColor"
     android:padding="16dp">
 
-    <!-- Top row: Progress • page (no back button) -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/topRow"
         android:layout_width="0dp"
@@ -44,7 +44,7 @@
             android:layout_marginEnd="12dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Title: What's Your Height? -->
+
     <TextView
         android:id="@+id/tvTitle1"
         android:layout_width="wrap_content"
@@ -91,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="8dp"/>
 
-    <!-- Long yellow guide lines -->
+
     <View
         android:id="@+id/lineTop"
         android:layout_width="0dp"
@@ -114,7 +114,7 @@
         android:layout_marginBottom="24dp"
         android:layout_marginHorizontal="36dp"/>
 
-    <!-- Center overlay: prev / selected / next + short ticks -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/centerOverlay"
         android:layout_width="wrap_content"
@@ -184,7 +184,7 @@
             android:layout_marginTop="6dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Hidden NumberPicker that handles the scroll -->
+
     <NumberPicker
         android:id="@+id/npHeight"
         android:layout_width="wrap_content"
@@ -195,7 +195,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Unit label at the center -->
+
     <TextView
         android:id="@+id/tvUnit"
         android:layout_width="wrap_content"
@@ -208,7 +208,7 @@
         app:layout_constraintStart_toEndOf="@id/npHeight"
         android:layout_marginStart="8dp"/>
 
-    <!-- Bottom buttons -->
+
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="0dp"

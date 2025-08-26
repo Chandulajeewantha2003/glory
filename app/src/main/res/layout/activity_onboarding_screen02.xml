@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/primaryColor">
 
-    <!-- App Name -->
+
     <TextView
         android:id="@+id/appName"
         android:layout_width="wrap_content"
@@ -21,7 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Illustration -->
     <ImageView
         android:id="@+id/illustration"
         android:layout_width="0dp"
@@ -36,7 +35,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp" />
 
-    <!-- Title (you can change text for screen 2 if you like) -->
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
@@ -50,9 +49,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/illustration" />
 
-    <!-- Description -->
 
-    <!-- Slide Indicators (middle active) -->
+
+
     <TextView
         android:id="@+id/description"
         android:layout_width="0dp"
@@ -79,28 +78,28 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="20dp">
 
-        <!-- first inactive -->
+
         <View
             android:layout_width="30dp"
             android:layout_height="4dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/indicator_inactive"/>
 
-        <!-- middle active -->
+
         <View
             android:layout_width="30dp"
             android:layout_height="4dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/indicator_active"/>
 
-        <!-- third inactive -->
+
         <View
             android:layout_width="30dp"
             android:layout_height="4dp"
             android:background="@drawable/indicator_inactive"/>
     </LinearLayout>
 
-    <!-- Skip Button -->
+
     <Button
         android:id="@+id/skipButton"
         android:layout_width="0dp"

@@ -9,7 +9,7 @@
     android:background="@color/primaryColor"
     tools:context=".MainActivityHome">
 
-    <!-- Main ScrollView -->
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="0dp"
@@ -39,7 +39,7 @@
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
-            <!-- Banner Card 1 -->
+
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -57,7 +57,7 @@
                     android:alpha="0.9"/>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Horizontal Scroll - Features -->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -77,7 +77,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <!-- Shoulder -->
+
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="140dp"
                         android:layout_height="140dp"
@@ -108,7 +108,6 @@
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <!-- Chest -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="140dp"
                         android:layout_height="140dp"
@@ -139,7 +138,7 @@
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <!-- Arms -->
+
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="140dp"
                         android:layout_height="140dp"
@@ -170,7 +169,6 @@
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <!-- Back -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="140dp"
                         android:layout_height="140dp"
@@ -201,7 +199,7 @@
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <!-- Legs -->
+
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="140dp"
                         android:layout_height="140dp"
@@ -235,7 +233,7 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
-            <!-- Vertical List Section -->
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -246,7 +244,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="8dp"/>
 
-            <!-- Example Recommendation Card 1 -->
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -290,7 +288,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Example Recommendation Card 2 -->
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -334,7 +332,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Example Recommendation Card 3 -->
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -353,7 +351,7 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:scaleType="centerCrop"
-                        android:background="@drawable/image3"/>
+                        android:background="@drawable/image7"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -378,12 +376,11 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- ... (your other recommendation cards; keep same colors) ... -->
 
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navigation -->
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="0dp"

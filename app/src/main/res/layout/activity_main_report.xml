@@ -9,7 +9,7 @@
     android:textAlignment="center"
     tools:context=".MainActivityReport">
 
-    <!-- Scrollable Content -->
+
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -27,7 +27,7 @@
             android:padding="16dp">
 
 
-            <!-- Title -->
+
 
             <TextView
                 android:layout_width="368dp"
@@ -83,10 +83,6 @@
             </LinearLayout>
 
 
-            <!-- Title -->
-
-
-            <!-- Banner Card 0 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -103,7 +99,7 @@
                     android:scaleType="centerCrop" />
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Banner Card 1 -->
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
@@ -121,7 +117,7 @@
             </com.google.android.material.card.MaterialCardView>
 
 
-            <!-- Banner Card 2 -->
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="450dp"
@@ -139,7 +135,7 @@
             </com.google.android.material.card.MaterialCardView>
 
 
-            <!-- Banner Card 3 -->
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
@@ -160,7 +156,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navigation -->
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="0dp"

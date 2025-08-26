@@ -9,7 +9,7 @@
     android:background="@color/primaryColor"
     tools:context=".MainActivityHistory">
 
-    <!-- Scrollable Content -->
+
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -37,7 +37,6 @@
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
-            <!-- Banner Card 1 -->
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="12dp" />
@@ -59,7 +58,7 @@
             </com.google.android.material.card.MaterialCardView>
 
 
-            <!-- Banner Card 1 -->
+
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
@@ -77,17 +76,10 @@
             </com.google.android.material.card.MaterialCardView>
 
 
-
-
-
-
-
-
-
         </LinearLayout>
     </ScrollView>
 
-    <!-- Bottom Navigation -->
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="0dp"
